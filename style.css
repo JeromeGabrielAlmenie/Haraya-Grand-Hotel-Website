@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+    --primary-color: #1a1209;
+    --secondary-color: #c9a84c;
+    --text-dark: #1a1209;
+    --text-light: #8a7560;
+    --extra-light: #faf7f2;
+    --white: #ffffff;
+    --max-width: 1200px;
+    --header-font: "Playfair Display", serif;
+}
+
+*{ 
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+.section__container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+.section__subheader {
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    letter-spacing: 3px;
+}
+
+.section__header {
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: var(--header-font);
+    color: var(--text-dark);
+}
+
+.section__description {
+    margin-top: .75rem;
+    color: var(--text-light);
+}
+
+.btn {
+    padding: .75rem 2rem;
+    font-size: 1rem;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #a8863a;
+}
+
+.section__nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section__nav span {
+    padding: 10px 15px;
+    font-size: 1.25rem;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.section__nav span:hover {
+    background-color: var(--secondary-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color: #8a7560;
+    letter-spacing: 2px;
+}
+
+.logo div {
+    padding-inline: 12px;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    border-right: 2px solid var(--secondary-color);
+}
+
+img,
+video {
+    width: 100%;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    position: fixed;
+    isolation: isolate;
+    width: 100%;
+    z-index: 9;
+}
+
+.nav__bar {
+    position: relative;
+    isolation: isolate;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+}
+
+.nav__header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--extra-light);
+    border-bottom: 1px solid #e8dfc8;
+}
+
+.nav__menu__btn {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.nav__links {
+    list-style: none;
+    position: absolute;
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--extra-light);
+    transform: translateY(-100%);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.nav__links.open {
+    transform: translateY(0);
+}
+
+.nav__links a {
+    color: var(--text-dark);
+    transition: 0.3s;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.nav__links a:hover {
+    color: var(--secondary-color);
+}
+
+.header {
+    min-height: 90vh;
+    display: flex;
+    align-items: flex-start;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)),
+    url("assets/Haraya Grand Hotel.png");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header__container.section__container {
+    padding-top: 20rem;
+    padding-left: 8rem;
+    max-width: 700px;
+    margin: 0;
+}
+
+.header__container .section__subheader {
+    color: var(--secondary-color);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 5px;
+    font-size: 1.1rem;
+}
+
+.header__container h1 {
+    margin-bottom: 2rem;
+    font-size: 5.5rem;
+    font-weight: 800;
+    line-height: 6.5rem;
+    font-family: var(--header-font);
+    color: var(--white);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.booking {
+    background-color: var(--primary-color);
+}
+
+.booking__container form {
+    max-width: 350px;
+    margin: auto;
+    display: grid;
+    gap: 2rem;
+}
+
+.input__group {
+    display: grid;
+    gap: 1rem;
+}
+
+.input__group label {
+    font-weight: 600;
+    color: var(--white);
+}
+
+.input__group input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: var(--white);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--text-light);
+    border-radius: 5px;
+}
+
+.input__group input::placeholder {
+    color: var(--text-light);
+}
+
+.about {
+    position: relative;
+    isolation: isolate;
+}
+
+.about::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    height: 75%;
+    width: 100%;
+    background-image: url(assets/About-4.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: .05;
+    z-index: -1;
+}
+
+.about__container {
+    display: grid;
+    gap: 4rem 2rem;
+}
+
+.about__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.about__card {
+    height: 100%;
+    padding: 2rem;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+.about__card span {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+
+.about__card h4 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: var(--header-font);
+    color: var(--text-dark);
+}
+
+.about__card p {
+    color: var(--text-light);
+}
+
+.about__card:nth-child(4) {
+    background-color: var(--primary-color);
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+}
+
+.about__card:nth-child(4) :is(h4, p) {
+    color: var(--white);
+}
+
+.about__image img {
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+}
+
+.about__content {
+    display: grid;
+    gap: 1rem;
+}
+
+.about__content .section__description {
+    margin-bottom: 2rem;
+}
