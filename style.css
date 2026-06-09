@@ -179,7 +179,7 @@ nav {
     align-items: center;
     justify-content: flex-start;
     background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)),
-    url("assets/Haraya Grand Hotel - 1.png");
+    url("assets/Haraya Grand Hotel.png");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -304,12 +304,12 @@ nav {
 }
 
 .about__card:nth-child(4) {
-    background-color: var(--primary-color);
+    background-color: var(--white);
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .about__card:nth-child(4) :is(h4, p) {
-    color: var(--white);
+    color: var(--text-dark);
 }
 
 .about__image img {
@@ -408,39 +408,42 @@ nav {
 }
 
 .intro {
-    position: relative;
-    isolation: isolate;
-    background-color: var(--primary-color);
-}
-
-.intro::before {
-    position: absolute;
-    content: "";
-    right: 0;
-    height: 100%;
-    width: calc(100vw / 4);
-    background-color: var(--secondary-color);
-    z-index: -1;
+    background-color: var(--extra-light);  /* tinanggal ang dark bg */
+    border-top: 1px solid #e8dfc8;
+    border-bottom: 1px solid #e8dfc8;
 }
 
 .intro__container {
     display: grid;
-    gap: 4rem 2rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
 }
 
 .intro__container .section__subheader {
     color: var(--secondary-color);
 }
 
-.intro__container :is(.section__header, .section__description) {
+.intro__container .section__header {
+    color: var(--text-dark);   /* dark na ang header */
     margin-bottom: 1rem;
-    color: var(--white);
+}
+
+.intro__container .section__description {
+    color: var(--text-light);  /* light brown para bagay */
+    margin-bottom: 2rem;
 }
 
 .intro__video {
-    max-width: 450px;
-    margin: auto;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.intro__video video {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
 }
 
 .feature__container :is(.section__subheader, .section__header) {
@@ -450,7 +453,19 @@ nav {
 .feature__grid {
     margin-top: 4rem;
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+}
+
+.feature__card {
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #e8dfc8;
+    transition: 0.3s;
+}
+
+.feature__card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .feature__card span {
@@ -465,11 +480,12 @@ nav {
     font-size: 1.25rem;
     font-weight: 800;
     font-family: var(--header-font);
-    counter-reset: var(--text-dark);
+    color: var(--text-dark);
 }
 
 .feature__card p {
     color: var(--text-light);
+    line-height: 1.7;
 }
 
 .menu {
@@ -494,7 +510,9 @@ nav {
     align-items: center;
     gap: 1rem;
     cursor: pointer;
-    transition: 0.3s; 
+    padding: 1rem;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
 .menu__items li:hover {
