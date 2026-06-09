@@ -471,3 +471,55 @@ nav {
 .feature__card p {
     color: var(--text-light);
 }
+
+.menu {
+    background-color: var(--white);
+}
+
+.menu__header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.menu__items {
+    list-style: none;
+    margin-block: 4rem;
+    display: grid;
+    gap: 1rem 4rem;
+}
+
+.menu__items li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: 0.3s; 
+}
+
+.menu__items li:hover {
+    background-color: var(--primary-color);
+}
+
+.menu__items img {
+    max-width: 100px;
+    border-radius: 2px;
+}
+
+.menu__items h4 {
+    margin-top: .5rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    font-family: var(--header-font);
+    transition: 0.3s;
+}
+
+.menu__items p {
+    max-width: 400px;
+    color: var(--text-light);
+    transition: 0.3s;
+}
+
+.menu__items li:hover :is(h4, p) {
+    color: var(--white);
+}
