@@ -541,3 +541,81 @@ nav {
 .menu__items li:hover :is(h4, p) {
     color: var(--white);
 }
+
+.menu__images {
+    margin-bottom: 4rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.menu__images img {
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+}
+
+.menu__banner {
+    list-style: none;
+    padding: 4rem 2rem;
+    display: grid;
+    gap: 2rem;
+    text-align: center;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.menu__banner span {
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+}
+
+.menu__banner h4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.menu__banner p {
+    color: var(--text-light);
+}
+
+.news__header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.news__grid {
+    margin-top: 4rem;
+    display: grid;
+    gap: 2rem 1rem;
+}
+
+.news__card img {
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px (0,0,0,0.2);
+}
+
+.news__card__title {
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.news__card__title p {
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.news__card h4 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    font-family: var(--header-font);
+    color: var(--text-dark);
+}
+
+.news__card p {
+    color: var(--text-light);
+}
