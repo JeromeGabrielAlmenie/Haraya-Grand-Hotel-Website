@@ -47,3 +47,8 @@ ScrollReveal().reveal(".feature__card", {
     ...scrollRevealOption,
     interval: 500,
 });
+
+ScrollReveal().reveal(".news__card", {
+    ...scrollRevealOption,
+    interval: 500,
+});
