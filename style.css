@@ -174,18 +174,19 @@ nav {
 }
 
 .header {
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: flex-start;
     background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)),
-    url("assets/Haraya Grand Hotel.png");
-    background-position: center top;
+    url("assets/Haraya Grand Hotel - 1.png");
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .header__container.section__container {
-    padding-top: 20rem;
+    padding-top: 8rem;
     padding-left: 8rem;
     max-width: 700px;
     margin: 0;
@@ -327,7 +328,14 @@ nav {
 }
 
 .room__container {
-    padding-block: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 0;
+}
+
+.room__container--premium {
+    padding-top: 0;
+    padding-bottom: 5rem;
+    background-color: var(--extra-light);
 }
 
 .room__container :is(.section__subheader, .section__header) {
@@ -338,10 +346,11 @@ nav {
 .room__grid {
     max-width: 1200px;
     margin-inline: auto;
-    margin-top: 4rem;
+    margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+    padding-bottom: 30px;
 }
 
 .room__card {
@@ -367,7 +376,7 @@ nav {
     justify-content: space-between;
     gap: 1rem;
     background-color: var(--white);
-    transform: translateY(-30px);
+    transform: translateY(-15px);
     border-radius: 10px;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
 }
@@ -432,4 +441,33 @@ nav {
     max-width: 450px;
     margin: auto;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature__container :is(.section__subheader, .section__header) {
+    text-align: center;
+}
+
+.feature__grid {
+    margin-top: 4rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.feature__card span {
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+
+.feature__card h4 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    font-family: var(--header-font);
+    counter-reset: var(--text-dark);
+}
+
+.feature__card p {
+    color: var(--text-light);
 }

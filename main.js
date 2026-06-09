@@ -40,3 +40,10 @@ ScrollReveal().reveal(".room__card", {
     ...scrollRevealOption,
     interval: 500,
 });
+
+// features container 
+
+ScrollReveal().reveal(".feature__card", {
+    ...scrollRevealOption,
+    interval: 500,
+});
