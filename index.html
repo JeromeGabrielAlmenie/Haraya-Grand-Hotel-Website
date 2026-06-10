@@ -43,17 +43,26 @@
             <form action="/">
                 <div class="input__group">
                     <label for="arrival">Arrival Date</label>
-                    <input type="text" placeholder="Your Arrival Date">
+                    <div class="input__wrapper">
+                        <i class="ri-calendar-line"></i>
+                        <input type="date" id="arrival" required>
+                    </div>
                 </div>
                 <div class="input__group">
                     <label for="departure">Departure Date</label>
-                    <input type="text" placeholder="Your Departure Date">
+                    <div class="input__wrapper">
+                        <i class="ri-calendar-check-line"></i>
+                        <input type="date" id="departure" required>
+                    </div>
                 </div>
                 <div class="input__group">
                     <label for="guests">Guests</label>
-                    <input type="text" placeholder="Number of Guests">
+                    <div class="input__wrapper">
+                        <i class="ri-user-line"></i>
+                        <input type="number" id="guests" placeholder="0" min="1" max="10" required>
+                    </div>
                 </div>
-                <button class="btn">Check Availability</button>
+                <button class="btn booking__btn">Check Availability</button>
             </form>
         </div>
     </section>
@@ -107,82 +116,100 @@
         </div>
     </section>
 
-    <!-- Ocean View Rooms -->
     <section class="room__container" id="room">
         <div class="section__container">
             <p class="section__subheader">ROOMS</p>
             <h2 class="section__header">Ocean View</h2>
             <div class="room__grid">
+                
                 <div class="room__card">
-                    <img src="assets/Single Room.png" alt="room">
-                    <div class="room__card__details">
-                        <div>
-                            <h4>Ocean View Single Room</h4>
-                            <p>Features: King Size Bed, Hot & Cold Shower, 32 Inch TV.</p>
+                    <div class="room__card__content">
+                        <img src="assets/Single Room.png" alt="room">
+                        <div class="room__card__details">
+                            <div class="room__text">
+                                <h4>Ocean View Single Room</h4>
+                                <p>Features: King Size Bed, Hot & Cold Shower, 32 Inch TV.</p>
+                            </div>
+                            <h3>$99<span>/night</span></h3>
                         </div>
-                        <h3>$99<span>/night</span></h3>
                     </div>
                 </div>
+
                 <div class="room__card">
-                    <img src="assets/Twin Room.png" alt="room">
-                    <div class="room__card__details">
-                        <div>
-                            <h4>Ocean View Twin Room</h4>
-                            <p>Features: 2 King Size Bed, Jacuzzi, 45 Inch TV.</p>
+                    <div class="room__card__content">
+                        <img src="assets/Twin Room.png" alt="room">
+                        <div class="room__card__details">
+                            <div class="room__text">
+                                <h4>Ocean View Twin Room</h4>
+                                <p>Features: 2 King Size Bed, Jacuzzi, 45 Inch TV.</p>
+                            </div>
+                            <h3>$140<span>/night</span></h3>
                         </div>
-                        <h3>$140<span>/night</span></h3>
                     </div>
                 </div>
+
                 <div class="room__card">
-                    <img src="assets/Double King Room.png" alt="room">
-                    <div class="room__card__details">
-                        <div>
-                            <h4>Ocean View Double King Grande</h4>
-                            <p>Features: 2 King Size Bed, Sauna & Jacuzzi, 55 Inch TV.</p>
+                    <div class="room__card__content">
+                        <img src="assets/Double King Room.png" alt="room">
+                        <div class="room__card__details">
+                            <div class="room__text">
+                                <h4>Ocean View Double King Grande</h4>
+                                <p>Features: 2 King Size Bed, Sauna & Jacuzzi, 55 Inch TV.</p>
+                            </div>
+                            <h3>$199<span>/night</span></h3>
                         </div>
-                        <h3>$199<span>/night</span></h3>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Beach Front Rooms -->
     <section class="room__container room__container--premium" id="premium-room">
         <div class="section__container">
             <p class="section__subheader">ROOMS</p>
             <h2 class="section__header">Beach Front</h2>
             <div class="room__grid">
+                
                 <div class="room__card">
-                    <img src="assets/Beach Front Solo.png" alt="room">
-                    <div class="room__card__details">
-                        <div>
-                            <h4>BeachFront Solo</h4>
-                            <p>Features: King Size Bed, Private Balcony, 55 Inch TV.</p>
+                    <div class="room__card__content">
+                        <img src="assets/Beach Front Solo.png" alt="room">
+                        <div class="room__card__details">
+                            <div class="room__text">
+                                <h4>BeachFront Solo</h4>
+                                <p>Features: King Size Bed, Private Balcony, 55 Inch TV.</p>
+                            </div>
+                            <h3>$299<span>/night</span></h3>
                         </div>
-                        <h3>$299<span>/night</span></h3>
                     </div>
                 </div>
+
                 <div class="room__card">
-                    <img src="assets/Beach Front Family.png" alt="room">
-                    <div class="room__card__details">
-                        <div>
-                            <h4>Beachfront Family</h4>
-                            <p>Features: 2 King Size Bed, Sauna & Jacuzzi, 65 Inch TV.</p>
+                    <div class="room__card__content">
+                        <img src="assets/Beach Front Family.png" alt="room">
+                        <div class="room__card__details">
+                            <div class="room__text">
+                                <h4>Beachfront Family</h4>
+                                <p>Features: 2 King Size Bed, Sauna & Jacuzzi, 65 Inch TV.</p>
+                            </div>
+                            <h3>$399<span>/night</span></h3>
                         </div>
-                        <h3>$399<span>/night</span></h3>
                     </div>
                 </div>
+
                 <div class="room__card">
-                    <img src="assets/Beach Front Luxury.png" alt="room">
-                    <div class="room__card__details">
-                        <div>
-                            <h4>Beachfront Luxury</h4>
-                            <p>Features: Full Suite, Private Pool, Butler Service.</p>
+                    <div class="room__card__content">
+                        <img src="assets/Beach Front Luxury.png" alt="room">
+                        <div class="room__card__details">
+                            <div class="room__text">
+                                <h4>Beachfront Luxury</h4>
+                                <p>Features: Full Suite, Private Pool, Butler Service.</p>
+                            </div>
+                            <h3>$499<span>/night</span></h3>
                         </div>
-                        <h3>$499<span>/night</span></h3>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -245,88 +272,84 @@
 
     <section class="menu" id="menu">
         <div class="section__container menu__container">
-            <div class="menu__header">
+            <div class="menu__top">
                 <div>
                     <p class="section__subheader">MENU</p>
                     <h2 class="section__header">Our Food Menu</h2>
-                    <div class="section__nav">
-                        <span><i class="ri-arrow-left-line"></i></span>
-                        <span><i class="ri-arrow-right-line"></i></span>
-                    </div>
                 </div>
-                <ul class="menu__items">
-                    <li>
-                        <img src="assets/pancake.png" alt="menu" />
-                        <div class="menu__details">
-                            <h4>Pancake Selection</h4>
-                            <p>Mixture of Pancake, Commonly topped with fruits and sweet syrups.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="assets/spaghetti.png" alt="menu" />
-                        <div class="menu__details">
-                            <h4>Pasta Selection</h4>
-                            <p>Traditional Italian Recipe, Pasta and other Mixture of Sauces.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="assets/tapsilog.png" alt="menu" />
-                        <div class="menu__details">
-                            <h4>Silog Selection</h4>
-                            <p>A Traditional Filipino Cuisine, Commonly partnered with Garlic Rice, Egg, Tomato and Cucumbers.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="assets/Ramen.png" alt="menu" />
-                        <div class="menu__details">
-                            <h4>Ramen Selection</h4>
-                            <p>Traditional Japanese soup, commonly created using beef broth.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="assets/Burgers.png" alt="menu" />
-                        <div class="menu__details">
-                            <h4>Burgers Selection</h4>
-                            <p>A burger renowned worldwide for its wide variety of styles and flavors.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="assets/Pizza.png" alt="menu" />
-                        <div class="menu__details">
-                            <h4>Pizza Selection</h4>
-                            <p>A Traditional Italian Menu that was renowned worldwide for its taste and flavors.</p>
-                        </div>
-                    </li>
-                </ul>
-                <div class="menu__images">
-                    <img src="assets/Sinigang.png" alt="menu"/>
-                    <img src="assets/Adobo.png" alt="menu"/>
-                    <img src="assets/Sisig.png" alt="menu"/>
-                    <img src="assets/Bulalo.png" alt="menu"/>
+                <div class="section__nav">
+                    <span><i class="ri-arrow-left-line"></i></span>
+                    <span><i class="ri-arrow-right-line"></i></span>
                 </div>
-                <ul class="menu__banner">
-                    <li>
-                        <span><i class="ri-file-text-line"></i></span>
-                        <h4>84k</h4>
-                        <p>Projects are Completed</p>
-                    </li>
-                    <li>
-                        <span><i class="ri-user-line"></i></span>
-                        <h4>10M</h4>
-                        <p>Active Around World</p>
-                    </li>
-                    <li>
-                        <span><i class="ri-function-line"></i></span>
-                        <h4>02k</h4>
-                        <p>Categories Served</p>
-                    </li>
-                    <li>
-                        <span><i class="ri-lightbulb-flash-line"></i></span>
-                        <h4>100M</h4>
-                        <p>Ideas Raised Funds</p>
-                    </li>
-                </ul>
             </div>
+            
+            <ul class="menu__items">
+                <li>
+                    <img src="assets/pancake.png" alt="Eggs & Bacon" />
+                    <div class="menu__details">
+                        <h4>Eggs & Bacon</h4>
+                        <p>It is a culinary innovation that puts a unique spin on the beloved breakfast combination.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/spaghetti.png" alt="Tea or Coffee" />
+                    <div class="menu__details">
+                        <h4>Tea or Coffee</h4>
+                        <p>A classic choice for your daily dose of comfort and calmness.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/tapsilog.png" alt="Chia Oatmeal" />
+                    <div class="menu__details">
+                        <h4>Chia Oatmeal</h4>
+                        <p>Our Chia Oatmeal is a wholesome nutrient-packed breakfast delight.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/Ramen.png" alt="Fruit Parfait" />
+                    <div class="menu__details">
+                        <h4>Fruit Parfait</h4>
+                        <p>Our Fruit Parfait is a delightful culinary masterpiece of freshness and flavor.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/Burgers.png" alt="Marmalade Selection" />
+                    <div class="menu__details">
+                        <h4>Marmalade Selection</h4>
+                        <p>Our Marmalade Selection is a delectable medley of vibrant, handcrafted citrus preserves.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/Pizza.png" alt="Cheese Plate" />
+                    <div class="menu__details">
+                        <h4>Cheese Plate</h4>
+                        <p>Our cheese plate is a masterpiece that celebrates rich and diverse world of cheeses.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="menu__banner">
+                <li>
+                    <span><i class="ri-file-text-line"></i></span>
+                    <h4>84k</h4>
+                    <p>Projects are Completed</p>
+                </li>
+                <li>
+                    <span><i class="ri-user-line"></i></span>
+                    <h4>10M</h4>
+                    <p>Active Around World</p>
+                </li>
+                <li>
+                    <span><i class="ri-function-line"></i></span>
+                    <h4>02k</h4>
+                    <p>Categories Served</p>
+                </li>
+                <li>
+                    <span><i class="ri-lightbulb-flash-line"></i></span>
+                    <h4>100M</h4>
+                    <p>Ideas Raised Funds</p>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -440,4 +463,3 @@
     <script src="main.js"></script>
 </body>
 </html>
-<!-- End  | tuloy mo yung sa macbook fix identity -->
