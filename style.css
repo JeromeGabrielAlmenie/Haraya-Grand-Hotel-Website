@@ -838,3 +838,96 @@ nav {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ==========================================================================
+   NAVBAR — SCROLLED STATE
+   ========================================================================== */
+nav.scrolled .nav__header {
+    padding: 0.75rem 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav__links a.active {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   TOAST NOTIFICATION
+   ========================================================================== */
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(30px);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.75rem;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    white-space: nowrap;
+}
+
+.toast--show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.toast--success {
+    background-color: #1a1209;
+    color: #c9a84c;
+    border-left: 4px solid #c9a84c;
+}
+
+.toast--error {
+    background-color: #1a1209;
+    color: #e07070;
+    border-left: 4px solid #e07070;
+}
+
+.toast i {
+    font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   BACK TO TOP BUTTON
+   ========================================================================== */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(201, 168, 76, 0.4);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: #a8863a;
+    transform: translateY(-3px);
+}
